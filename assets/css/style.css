@@ -1,0 +1,72 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+}
+
+/* --- CUSTOM SCROLLBAR LOGIC (Pixel Perfect) --- */
+/* Yeh sirf cards wale container par apply hoga */
+.custom-scroll {
+  overflow-y: auto;
+  padding-right: 10px; /* Space for scrollbar */
+}
+
+/* Width of the scrollbar */
+.custom-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track (Background) */
+.custom-scroll::-webkit-scrollbar-track {
+  background: #e2e8f0;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Handle (The moving part) - Blue like screenshot */
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 10px;
+  height: 50px; /* Fixed height look */
+}
+
+/* Handle on hover */
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: #1d4ed8;
+}
+
+/* Progress Bar Striped Effect */
+.progress-striped {
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.2) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
+
+/* Mobile Header Curve */
+.mobile-curve {
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
+}
+/* Sidebar Transition Classes */
+#mobile-sidebar {
+  transition: transform 0.3s ease-in-out;
+}
+.sidebar-open {
+  transform: translateX(0) !important;
+}
+.sidebar-closed {
+  transform: translateX(-100%);
+}
+/* hide scrollbar but keep scrolling */
+.hide-scrollbar::-webkit-scrollbar {
+  width: 0px;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none; /* Firefox */
+}
